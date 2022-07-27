@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --VeryDarkBlue :hsl(226, 43%, 10%);
+    --DarkBlue:hsl(235, 46%, 20%);
+    --DesaturatedBlue: hsl(235, 45%, 61%);
+    --PaleBlue: hsl(236, 100%, 87%);
+    --Blue: hsl(246, 80%, 60%);
+    /*For Job*/
+    --VeryLightRed: hsl(15, 100%, 70%);
+    --SoftBLue: hsl(195, 74%, 62%);
+    --LightRed: hsl(348, 100%, 68%);
+    --LimeGreen: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --SoftOrange: hsl(43, 84%, 65%);
+}
+
+body{
+    background-color: var(--VeryDarkBlue);
+    font-family:'Rubik', sans-serif;
+    font-size:18px;
+    font-weight: 300;
+}
+a{
+    text-decoration: none;
+    color: var(--PaleBlue);
+    font-size: 1rem;
+}
+a:hover{
+    color: white;
+    transition: color 500ms ease-in-out;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h4{
+    font-size: 1rem;
+}
+
+h4,h1,h2{
+    color: white;
+}
+span,p{
+    color: var(--PaleBlue);
+}
+main{
+    width: 60%;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+}
+
+.job-list{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: 200px;
+    grid-gap: 10px;
+}
+
+.job{
+    border-radius: 10px;
+}
+
+.job-info{
+    background-color: var(--DarkBlue);
+    height: 150px;
+    margin-top: 50px;
+    padding: 20px 10px 0 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.job-info:hover{
+    background-color: var(--DesaturatedBlue);
+    transition: background-color 500ms ease-in-out;
+}
+
+.job-info img{
+    float: right;
+    margin-top: 10px;
+}
+
+.job-info img:hover{
+    color: white;
+    transition: color 500ms ease-in-out;
+}
+
+.time{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.time h1{
+    margin-bottom: 10px;
+}
+
+.profile{
+    background-color: var(--DarkBlue);
+    border-radius: 10px;
+}
+
+.profile .user{
+    background-color: var(--Blue);
+    padding: 20px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.profile .user span{
+    color: white;
+}
+
+.profile img{
+    width: 75px;
+    height: 75px;
+    margin-bottom: 20px;
+}
+
+.profile .user-link{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--DarkBlue);
+    border-radius: 0px 0px 10px 10px;
+    position: relative;
+}
+
+.profile .user-link a{
+    width: 100%;
+    display: inline-block;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#work{
+    background-color: var(--VeryLightRed);
+    background-image: url('./images/icon-work.svg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+#study{
+    background-color: var(--LightRed);
+    background-image: url('./images/icon-study.svg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+#play{
+    background-color: var(--SoftBLue);
+    background-image: url('./images/icon-play.svg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+#exercise{
+    background-color: var(--LimeGreen);
+    background-image: url('./images/icon-exercise.svg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+#social{
+    background-color: var(--Violet);
+    background-image: url('./images/icon-social.svg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+#selfcare{
+    background-color: var(--SoftOrange);
+    background-image: url('./images/icon-self-care.svg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+@media(max-width:765px){
+    body{
+        padding: 0 20px;
+    }
+    main{
+        grid-template-columns: 1fr;
+        width: 100%;
+        grid-gap: 20px;
+    }
+
+    .profile .user{
+        flex-direction: row;
+        height: auto;
+    }
+    .profile .user-link{
+        flex-direction: row;
+    }
+    .profile .user-link a{
+        justify-content: center;
+        padding: 0;
+    }
+
+    .profile .user-name{
+        margin: 20px;
+    }
+
+    .profile img{
+        width: 75px;
+        height: 75px;
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+    .job-list{
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px;
+        grid-gap: 20px;
+    }
+    .job-info{
+        height: 100px;
+    }
+
+    #work,#play,#study,#exercise,#social,#selfcare{
+        background-size: 30%;
+    }
+
+    .time{
+        flex-direction: row;
+        margin-top: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
